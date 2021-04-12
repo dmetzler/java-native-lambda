@@ -1,18 +1,17 @@
 package org.dmetzler.serverless;
 
-import io.quarkus.test.junit.QuarkusTest;
-import io.restassured.http.ContentType;
-
-import static io.restassured.RestAssured.*;
-import org.junit.jupiter.api.Test;
-
+import static io.restassured.RestAssured.given;
+import static io.restassured.RestAssured.when;
 import static org.hamcrest.Matchers.equalTo;
-import static org.hamcrest.Matchers.is;
 import static org.hamcrest.Matchers.greaterThanOrEqualTo;
 
 import java.util.UUID;
 
 import org.dmetzler.serverless.model.Movie;
+import org.junit.jupiter.api.Test;
+
+import io.quarkus.test.junit.QuarkusTest;
+import io.restassured.http.ContentType;
 
 @QuarkusTest
 public class MovieTest {
